@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import axios from 'axios'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
@@ -12,7 +13,8 @@ Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
 
-Vue.prototype.$appName = 'My App'
+Vue.prototype.$BASE_URL_API = 'http://localhost:5000/diurnum/'
+Vue.prototype.$axios = axios
 
 new Vue({
   router,
